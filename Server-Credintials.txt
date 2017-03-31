@@ -1,0 +1,15 @@
+FTP / CPanel
+----------------------
+Username..: bankahm5
+Password..: 205aa65
+Domain....: bankauctionproperties.com
+
+
+Admin Panel Creds:
+----------------------
+username : auctionadmin
+pwd : auction123
+
+db name : bankahm5_auctions
+bd username : user bankahm5_khatik 
+password : khatik123

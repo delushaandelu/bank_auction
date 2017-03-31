@@ -1,0 +1,35 @@
+## Apache Mod Rewrite Rules 
+## Written for www.bankauctionproperties.com
+
+# Before Proceding ON the Apache mod_rewrite Engine
+# By writing following command.
+
+RewriteEngine on
+
+# Rule alice.html is re-directed to bob.html
+#RewriteRule ^alice.html$ bob.html
+#RewriteRule ^/?([a-zA-Z-]+)/([a-zA-Z-]+)/.*-A([a-zA-Z0-9-.]+)\.html$ articles.php?cat=$1&subcat=$2&article=$3 [L]
+
+#RewriteCond %{HTTP_HOST} !^www.bankauctionproperties.com$
+#RewriteRule ^(.*)$ www.bankauctionproperties.com/main$1 [R=301]
+
+# Rule for redirecting .htm page to .php page
+RewriteRule ^/*([a-zA-Z0-9_-]+)\.html$ $1\.php [L] 
+
+# get property category page
+RewriteRule ^/?([a-zA-Z-]+)/.*-c([0-9-.]+)\.html$ category.php?catId=$2 [L]
+
+# Property By Bank page
+RewriteRule ^/?([a-zA-Z-]+)/.*-b([0-9-.]+)\.html$ banks.php?bankId=$2 [L]
+
+# Property By City 
+RewriteRule ^/?([a-zA-Z-]+)/.*-p([0-9-.]+)\.html$ cities.php?cityId=$2 [L]
+
+#RewriteRule ^/?([a-zA-Z-]+)/.*-k([0-9-.]+)\.html$ test.php?cid=$2 [L]
+
+# Auction details
+RewriteRule ^/?([a-zA-Z-]+)/.*-a([0-9-.]+)\.html$ auctions.php?a=$2 [L]
+
+
+
+
